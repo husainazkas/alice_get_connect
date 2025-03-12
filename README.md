@@ -1,7 +1,9 @@
 **AliceGetConnect** is a Flutter library that enables seamless integration 
 between the HTTP Inspector library 
-[flutter_alice](https://pub.dev/packages/flutter_alice), 
+[alice](https://pub.dev/packages/alice),
 and the HTTP Networking library get_connect from [GetX](https://pub.dev/packages/get).
+
+This is forked repo from https://github.com/teknologicakrainternasional/alice_get_connect
 
 ## Features
 
@@ -38,14 +40,7 @@ You need to add this navigator key in order to show inspector UI. You can use al
 ```dart
 AliceGetConnect(navigatorKey: _navKey);
 ```
-3. Add [OverlaySupport](https://pub.dev/packages/overlay_support) in GetMaterialApp
-
-because AliceGetConnect uses bubble overlay, add OverlaySupport in GetMaterialApp
-
-```dart
-OverlaySupport.global(child: GetMaterialApp(...));
-```
-4. Add Request & Response Modifier
+3. Add Request & Response Modifier
 ```dart
 httpClient.addRequestModifier(alice.requestInterceptor);
 httpClient.addResponseModifier(alice.responseInterceptor);
