@@ -1,9 +1,5 @@
 class QuoteModel {
-  QuoteModel({
-    int? id,
-    String? quote,
-    String? author,
-  }) {
+  QuoteModel({int? id, String? quote, String? author}) {
     _id = id;
     _quote = quote;
     _author = author;
