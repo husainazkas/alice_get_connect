@@ -18,21 +18,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final _navKey = GlobalKey<NavigatorState>();
 
   @override
   Widget build(BuildContext context) {
     return OverlaySupport.global(
       child: GetMaterialApp(
-        navigatorKey: _navKey,
         title: 'Alice GetConnect Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
         home: const HomePage(),
-        initialBinding: BindingsBuilder((){
-          Get.put(AliceGetConnect(navigatorKey: _navKey));
+        initialBinding: BindingsBuilder(() {
+          Get.put(AliceGetConnect(navigatorKey: Get.key));
           Get.put(HomeProvider(Get.find()));
           Get.put(HomeController(Get.find()));
         }),
