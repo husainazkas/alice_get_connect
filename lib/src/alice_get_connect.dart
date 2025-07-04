@@ -11,9 +11,8 @@ import 'package:alice/model/alice_http_request.dart';
 import 'package:alice/model/alice_http_response.dart';
 import 'package:alice/model/alice_log.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/request/request.dart';
-import 'package:get/get_connect/http/src/response/response.dart';
-import 'package:get/get_utils/get_utils.dart';
 
 import 'base_interceptor.dart';
 
