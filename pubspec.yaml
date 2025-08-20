@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  alice: ^1.0.0-dev.12
+  alice: ^1.0.0
   get: ^4.5.1
 
 dev_dependencies:
