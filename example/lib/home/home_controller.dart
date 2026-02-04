@@ -15,17 +15,21 @@ class HomeController extends GetxController {
 
   getRandomQuote() {
     _isLoading.value = true;
-    provider.getRandomQuote().then((value) {
-      _quote.value = value;
-    }).onError((error, stackTrace) {
-      Get.showSnackbar(
-        GetSnackBar(
-          title: 'Warning',
-          message: error.toString(),
-          duration: const Duration(seconds: 2),
-        ),
-      );
-    }).whenComplete(() => _isLoading.value = false);
+    provider
+        .getRandomQuote()
+        .then((value) {
+          _quote.value = value;
+        })
+        .onError((error, stackTrace) {
+          Get.showSnackbar(
+            GetSnackBar(
+              title: 'Warning',
+              message: error.toString(),
+              duration: const Duration(seconds: 2),
+            ),
+          );
+        })
+        .whenComplete(() => _isLoading.value = false);
   }
 
   @override
