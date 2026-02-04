@@ -10,7 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  alice: ^1.0.0-dev.12
+  alice:
+    git:
+      url: https://github.com/husainazkas/alice.git
+      ref: enhancement/separate-between-android-notif-small-and-large-icoon
+      path: packages/alice
   get: ^4.5.1
 
 dev_dependencies:

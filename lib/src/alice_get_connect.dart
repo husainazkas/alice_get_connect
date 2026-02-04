@@ -29,6 +29,9 @@ class AliceGetConnect implements BaseInterceptor {
   /// Icon url for notification
   final String notificationIcon;
 
+  /// Large icon url for notification
+  final String? notificationLargeIcon;
+
   /// Connection timeout
   final Duration timeout;
 
@@ -44,6 +47,7 @@ class AliceGetConnect implements BaseInterceptor {
     this.showInspectorOnShake = false,
     this.showShareButton = true,
     this.notificationIcon = "@mipmap/ic_launcher",
+    this.notificationLargeIcon,
     this.timeout = const Duration(seconds: 30),
   }) {
     _aliceCore = AliceCore(
@@ -52,6 +56,7 @@ class AliceGetConnect implements BaseInterceptor {
         showNotification: showNotification,
         showInspectorOnShake: showInspectorOnShake,
         notificationIcon: notificationIcon,
+        notificationLargeIcon: notificationLargeIcon,
         showShareButton: showShareButton,
       ),
     );
